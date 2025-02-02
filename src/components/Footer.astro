@@ -2,7 +2,7 @@
 const today = new Date();
 ---
 
-<footer>
+<footer class="pb-4 pt-2 text-center fixed bottom-0 m-auto w-full">
 	&copy; {today.getFullYear()} Your name here. All rights reserved.
 	<div class="social-links">
 		<a href="https://m.webtoo.ls/@astro" target="_blank">
@@ -40,12 +40,8 @@ const today = new Date();
 	</div>
 </footer>
 <style>
-	footer {
-		padding: 2em 1em 6em 1em;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
-		text-align: center;
-	}
+/* 		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray)); */
 	.social-links {
 		display: flex;
 		justify-content: center;
