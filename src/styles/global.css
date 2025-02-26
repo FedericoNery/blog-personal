@@ -92,9 +92,31 @@
    * `article` contexts in Chrome, Firefox, and Safari.
    */
   
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-primary-dark;
+    
+    line-height: 1.2;
+  }
   h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
+    @apply text-5xl;
+/*     font-size: 3.052em;
+ */  }
+  h2 {
+    font-size: 2.441em;
+  }
+  h3 {
+    font-size: 1.953em;
+  }
+  h4 {
+    font-size: 1.563em;
+  }
+  h5 {
+    font-size: 1.25em;
   }
   
   /* Grouping content
@@ -105,11 +127,11 @@
    * 2. Show the overflow in Edge and IE.
    */
   
-  hr {
-	box-sizing: content-box; /* 1 */
-	height: 0; /* 1 */
-	overflow: visible; /* 2 */
-  }
+ /*  hr {
+	box-sizing: content-box; 
+	height: 0; 
+	overflow: visible; 
+  } */
   
   /**
    * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -449,31 +471,7 @@ main {
 	margin: auto;
 	padding: 3em 1em;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
-	line-height: 1.2;
-}
-h1 {
-	font-size: 3.052em;
-}
-h2 {
-	font-size: 2.441em;
-}
-h3 {
-	font-size: 1.953em;
-}
-h4 {
-	font-size: 1.563em;
-}
-h5 {
-	font-size: 1.25em;
-}
+
 strong,
 b {
 	font-weight: 700;

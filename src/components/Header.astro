@@ -15,7 +15,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 		<div>
 			<ThemeToggleButton />
 		</div>
-		<div class="social-links">
+		<!-- <div class="social-links">
 			<a href="https://twitter.com/astrodotbuild" target="_blank">
 				<span class="sr-only">Follow Astro on Twitter</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -34,7 +34,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 					></path></svg
 				>
 			</a>
-		</div>
+		</div> -->
 	</nav>
 </header>
 <style>
@@ -48,9 +48,10 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 		text-decoration: none;
 	}
 	nav {
-		display: flex;
+		display: grid;
+		grid-template-columns: 1fr 2fr 1fr;
+		justify-items: center;
 		align-items: center;
-		justify-content: space-between;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -66,6 +67,11 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 		display: flex;
 	}
 	@media (max-width: 720px) {
+		nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
 		.social-links {
 			display: none;
 		}
