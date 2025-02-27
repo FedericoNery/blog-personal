@@ -36,24 +36,67 @@ const rightPosts = posts.slice(3, 5);
   </head>
   <body class="h-full">
     <Header />
-    <main class="max-w-5xl m-auto main-container flex flex-col content-center justify-items-center pb-80">
+    <main
+      class="max-w-5xl m-auto main-container flex flex-col content-center justify-items-center md:pb-80 lg:pb-96"
+    >
       <h1 class="pb-8">Últimas notas</h1>
-      <div class="flex row gap-2 mb-8">
+      <div class="flex flex-row flex-wrap justify-center gap-2 mb-8">
         {
           categories.map((categorie) => (
             <Chip label={categorie} checked={false} />
           ))
         }
       </div>
-      <div class="grid grid-cols-[200px_minmax(350px,_1fr)_200px] gap-4">
-        <div class=" flex flex-col justify-between">
-          {leftPosts.map((post, index) => <div><BlogPostPreview post={post}/>{index % 2 === 0 && <hr class="mt-3 border-solid text-gray-300"/>}</div>)}
+      <div
+        class="flex flex-col gap-4
+        md:justify-center
+        lg:grid lg:grid-cols-[200px_minmax(350px,_1fr)_200px]"
+      >
+        <div
+          class="flex flex-col justify-between order-2
+          xs:max-lg:pl-4 xs:max-lg:pr-4
+
+          sm:flex-row
+          md:gap-1.5
+          lg:order-4 lg:flex-col"
+        >
+          {
+            leftPosts.map((post, index) => (
+              <div>
+                <BlogPostPreview post={post} />
+                {index % 2 === 0 && (
+                  <hr class="mt-3 border-solid text-gray-300" />
+                )}
+              </div>
+            ))
+          }
         </div>
-        <div>
+        <div
+          class="flex order-first
+          xs:max-lg:pl-4 xs:max-lg:pr-4
+          md:justify-center
+          lg:order-4"
+        >
           <BlogPostPreview post={mainPost} />
         </div>
-        <div class="flex flex-col justify-between">
-          {rightPosts.map((post, index) => <div><BlogPostPreview post={post}/>{index % 2 === 0 && <hr class="mt-3 border-solid text-gray-300"/>}</div>)}
+        <div
+          class="flex flex-col justify-between order-1
+          xs:max-lg:pl-4 xs:max-lg:pr-4
+
+        sm:flex-row
+        md:flex-row md:gap-1.5
+        lg:order-4 lg:flex-col"
+        >
+          {
+            rightPosts.map((post, index) => (
+              <div>
+                <BlogPostPreview post={post} />
+                {index % 2 === 0 && (
+                  <hr class="mt-3 border-solid text-gray-300" />
+                )}
+              </div>
+            ))
+          }
         </div>
       </div>
     </main>

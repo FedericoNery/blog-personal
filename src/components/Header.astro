@@ -4,12 +4,12 @@ import { SITE_TITLE } from '../consts';
 import ThemeToggleButton from './ThemeToggleButton.astro';
 ---
 
-<header class="m-0 pt-0 pb-0 pl-2 pr-2">
+<header class="m-0 pt-2 pb-4 pl-2 pr-2">
 	<nav>
 		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+		<div class="flex flex-row gap-2">
 			<HeaderLink href="/">Inicio</HeaderLink>
-			<HeaderLink href="/blog">Últimas entradas</HeaderLink>
+			<HeaderLink href="/blog">Últimas notas</HeaderLink>
 			<HeaderLink href="/about">Opiniones</HeaderLink>
 		</div>
 		<div>
@@ -42,18 +42,13 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 		margin: 0;
 		font-size: 1em;
 	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
 	nav {
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
 		justify-items: center;
 		align-items: center;
 	}
-	nav a {
+/* 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
 		text-decoration: none;
@@ -61,7 +56,7 @@ import ThemeToggleButton from './ThemeToggleButton.astro';
 	nav a.active {
 		text-decoration: none;
 		color:blueviolet;
-	}
+	} */
 	.social-links,
 	.social-links a {
 		display: flex;

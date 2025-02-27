@@ -35,6 +35,8 @@
 }
 
 @theme {
+  --breakpoint-xs: 30rem;
+  
   --color-primary-light: #3c8e9a;
   --color-primary-dark: #4e2a5b;
   --color-secondary-light: #70b1c2;
