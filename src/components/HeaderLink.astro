@@ -9,7 +9,7 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 ---
 
-<a href={href} class={isActive ? "text-primary-dark underline" : "text-secondary-dark no-underline"}><slot /></a>
+<a href={href} class={isActive ? "text-primary-dark" : "text-secondary-dark"}><slot /></a>
 <!-- <style>
 	a {
 		display: inline-block;

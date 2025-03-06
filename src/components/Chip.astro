@@ -2,9 +2,9 @@
 const { label, checked } = Astro.props;
 ---
 
-<div class="rounded-l-full rounded-r-full w-auto bg-transparent border-2 border-primary-dark text-center pb-1 pt-1 pl-2 pr-2 cursor-pointer">
+<div class="rounded-l-full rounded-r-full w-auto bg-transparent border-2 border-text-light text-center pb-1 pt-1 pl-2 pr-2 cursor-pointer">
     <input type="checkbox" id="chip-checkbox" multiple checked={checked} class=" hidden" />
     <label for="chip-checkbox">
-        <span class=" text-primary-dark cursor-pointer">{label}</span>
+        <span class=" text-text-light cursor-pointer">{label}</span>
     </label>
 </div>

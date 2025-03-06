@@ -1,0 +1,23 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="custom-gradient font-nunito min-h-screen">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+  <slot />
+  </body>
+</html>
+
+<style>
+  .custom-gradient {
+    --tw-gradient-stops: var(--color-bg1-light), var(--color-bg2-light),
+      var(--color-bg2-light), var(--color-bg3-light);
+    background: linear-gradient(60deg, var(--tw-gradient-stops));
+  }
+</style>
