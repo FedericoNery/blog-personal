@@ -45,6 +45,7 @@
 
   --color-text-light: #332F2A;
   --color-accent-light: #A07C6D;
+  --color-anchor-light-active: #A48986;
 
   --color-bg1-light: #F8DDCB;
   --color-bg2-light: #F9F4EC;
@@ -115,7 +116,7 @@
     @apply text-5xl;
 /*     font-size: 3.052em;
  */  }
-  h2 {
+/*   h2 {
     font-size: 2.441em;
   }
   h3 {
@@ -126,8 +127,10 @@
   }
   h5 {
     font-size: 1.25em;
-  }
-  
+  } */
+/*   p{
+    @apply text-xl;
+  } */
   /* Grouping content
 	 ========================================================================== */
   

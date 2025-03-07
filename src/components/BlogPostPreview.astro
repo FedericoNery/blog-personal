@@ -13,7 +13,7 @@ const { post } = Astro.props;
       class="rounded-lg"
     />
     <h4 class="mt-2 mb-2">{post.data.title}</h4>
-    <p class="text-text-light text-xs">{post.data.description}.
+    <p class="text-text-light text-xs">{post.data.shortDescription || post.data.description}.
     <span class=" text-gray-500 text-xs">
       <FormattedDate date={post.data.pubDate} />
     </span>

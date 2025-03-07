@@ -5,6 +5,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
 import Html from "./Html.astro";
+import ShareBar from "../components/ShareBar.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
@@ -15,15 +16,18 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <Header />
     <main class="max-w-5xl m-auto main-container">
       <article>
-        <div class="hero-image">
+<!--         <div class="hero-image">
           {
             heroImage && (
               <img width={1020} height={510} src={heroImage} alt="" />
             )
           }
-        </div>
+        </div> -->
         <div class="prose">
           <div class="title">
+            <h1 class="font-bold mb-4">{title}</h1>
+            <h3 class=" text-2xl font-extralight">{description}</h3>
+            <hr class=" text-gray-300 mt-4 mb-4"/>
             <div class="date">
               <FormattedDate date={pubDate} />
               {
@@ -34,8 +38,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
                 )
               }
             </div>
-            <h1>{title}</h1>
-            <hr />
+            <ShareBar />
           </div>
           <slot />
         </div>
