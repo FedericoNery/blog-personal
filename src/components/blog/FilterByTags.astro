@@ -1,0 +1,21 @@
+---
+import Chip from "../common/Chip.astro"
+
+const categories = [
+  "Música",
+  "Deporte",
+  "Esports",
+  "Tecnología",
+  "Angioplastía",
+  "Juegos",
+  "Compras",
+  "Experiencias",
+];
+---
+<div class="flex flex-row flex-wrap justify-center gap-2 mb-8">
+    {
+      categories.map((categorie) => (
+        <Chip label={categorie} checked={false} />
+      ))
+    }
+  </div>
