@@ -1,2 +1,13 @@
 ---
+import { LAYOUT_CONFIGS } from "../../../consts";
+import CoreMoment from "./CoreMoment.astro";
+import FiveMoments from "./FiveMoments.astro";
+import NormalMoment from "./NormalMoment.astro";
+
+const { configLabel } = Astro.props;
 ---
+
+{configLabel === LAYOUT_CONFIGS.CORE && <CoreMoment />}
+{configLabel === LAYOUT_CONFIGS.FIVE && <FiveMoments />}
+{configLabel === LAYOUT_CONFIGS.NORMAL && <NormalMoment />}
+
